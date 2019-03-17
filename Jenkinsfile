@@ -5,8 +5,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                cd Bot-Cleaner/
-                kubectl apply -f kube-stack.yaml
+                sh 'cd Bot-Cleaner/'
+                sh 'kubectl apply -f kube-stack.yaml'
             }
         }
     }
