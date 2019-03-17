@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 bat 'kubectl'
-                bat 'kubectl apply -f kube-stack.yml'
+                sh 'kubectl apply -f kube-stack.yml'
             }
         }
     }
