@@ -5,7 +5,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                kubectl apply -f kube-stack.yaml
+                bat 'kubectl apply -f kube-stack.yaml'
             }
         }
     }
